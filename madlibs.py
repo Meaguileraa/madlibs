@@ -41,6 +41,32 @@ def greet_person():
                            person=player,
                            compliment=compliment)
 
+@app.route('/game')
+def show_madlib_form():
+    """Gets user's response to 'Would you like to play a game?'"""
+
+#if user says no return a rendered template  goodbye.html
+    play_game = request.args.get("game")
+
+    if play_game == "yes":
+        return render_template("game.html")
+
+    else:
+        return render_template("goodbye.html")
+
+@app.route('/madlib')
+def show_madlib():
+    """Provides user input into a Madlibs story'"""
+
+    name = request.args.get("person")
+    color = request.args.get("color")
+    noun = request.args.get("noun")
+    adjective = request.args.get("adjective")
+
+    return render_template("madlib.html", person=name, color=color, 
+        noun=noun, adjective=adjective)
+
+
 
 if __name__ == '__main__':
     # Setting debug=True gives us error messages in the browser and also
