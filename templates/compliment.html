@@ -5,7 +5,18 @@
     <link rel="stylesheet" href="static/madlibs.css">
 </head>
 <body>
-    Hi {{ person }}! I think you're {{ compliment }}!
+<!--     Hi {{ person }}! I think you're {{ compliment }}! -->
+    Hi, {{ person }}! I think you're so:
+      {% for compliment in compliment %}
+        {{ compliment }}
+      {% endfor %}
+    
+<!--     <ul>
+      {% for compliment in compliment %}
+        <li>{{ compliment }}</li>
+      {% endfor %}
+    </ul> -->
+
 
 
     <form action="/game">

@@ -1,16 +1,22 @@
 h1 {
   font-family: sans-serif;
+  color: black;
 }
 
 body {
-  background-color: yellow;
+  background-color: #FFDAB9;
   text-align: center;
-  color: navy;
+  color: #FA8072;
 }
 
 p {
   color: red;
 }
 
+footer {
+    color: navy;
+}
+
 /*<!-- 
     <link rel="stylesheet" href="static/css/madlibs.css"> -->*/
+

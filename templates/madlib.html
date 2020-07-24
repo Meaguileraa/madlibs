@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
+
     <head>
         <title>Here is your Madlib!</title>
         <link rel="stylesheet" href="static/madlibs.css">
@@ -12,7 +13,9 @@ would bring with them they said their {{ color }} {{ pet }} {{ pet_name }}.
 The dream ended with {{ person }} and {{ pet_name }} playing {{ sport }}....
 wishful thinking!
     </body>
-</html>
+</html> -->
+
+
 
 <!-- person, color, noun, adjective, city, pet, pet name, destination, sport -->
 
@@ -27,3 +30,21 @@ and {{ adjective }} {{ destination }}. When other students asked who {{ person }
 would bring with them they said their {{ color }} {{ pet }} {{ pet_name }}. 
 The dream ended with {{ person }} and {{ pet_name }} playing {{ sport }}....
 wishful thinking!-->
+
+{% extends 'base.html' %}
+
+{% block title %}Mad Libs{% endblock %}
+
+{% block content %}
+  <h2>Your Mad Lib:</h2>
+
+        Currently in Hackbright's SEPT 2020 ADA cohort there is a student 
+named {{ person }}. {{ person }} was dreaming about traveling to {{ city }} 
+and {{ adjective }} {{ destination }}. When other students asked who {{ person }}
+would bring with them they said their {{ color }} {{ pet }} {{ pet_name }}. 
+The dream ended with {{ person }} and {{ pet_name }} playing {{ sport }}....
+wishful thinking!
+
+<!--   <p>I'm a paragraph!</p> -->
+
+{% endblock %}

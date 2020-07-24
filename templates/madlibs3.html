@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <title>Here is your Madlib!</title>
@@ -8,6 +8,19 @@
         Welcome to {{ adejctive }} {{ destination }}! This is a magical place that is run by {{ pet }}s and {{ pet_name }} is the leader of them. Their way of life 
         is playing {{ sport }} all day. Enjoy {{ person }}!
     </body>
-</html>
+</html> -->
 
 <!-- person, color, noun, adjective, city, pet, pet name, destination, sport -->
+
+
+{% extends 'base.html' %}
+
+{% block title %}Mad Libs{% endblock %}
+
+{% block content %}
+  <h2>Your Mad Lib:</h2>
+
+        Welcome to {{ adejctive }} {{ destination }}! This is a magical place that is run by {{ pet }}s and {{ pet_name }} is the leader of them. Their way of life 
+        is playing {{ sport }} all day. Enjoy {{ person }}!
+
+{% endblock %}

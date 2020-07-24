@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <title>Here is your Madlib!</title>
@@ -10,10 +10,24 @@
 When {{ person }} went to pick it up, it burst into flames in a totally
 {{ adjective }} way.
     </body>
-</html>
+</html> -->
 
 <!-- person, color, noun, adjective, city, pet, pet name, destination, sport -->
 
 <!-- There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
 When {{ person }} went to pick it up, it burst into flames in a totally
 {{ adjective }} way. -->
+
+{% extends 'base.html' %}
+
+{% block title %}Mad Libs{% endblock %}
+
+{% block content %}
+  <h2>Your Mad Lib:</h2>
+
+        There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab with 
+        their pet {{ pet_name }}.
+When {{ person }} went to pick it up, it burst into flames in a totally
+{{ adjective }} way.
+
+{% endblock %}
